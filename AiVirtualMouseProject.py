@@ -48,14 +48,26 @@ while True:
         x2, y2 = lmList[12][1:]
         # print(x1, y1, x2, y2)
 
+
     # 3. Check which fingers are up
     fingers = detector.fingersUp()
-    if len(fingers) > 4 and fingers[1] == 1 and fingers[2] == 1 and fingers[3] == 1 and fingers[4] == 1:
+
+
+    # Scroll up
+    if len(fingers) > 4  and fingers[0] == 0 and fingers[1]==1 and fingers[2] == 1 and fingers[3] == 1 and fingers[4] == 1:
+        length, img, lineInfo = detector.findDistance(4, 8, img)
+        # print("IN FUN2")
+        cv2.circle(img, (lineInfo[4], lineInfo[5]),15, (0, 255, 0), cv2.FILLED)
+        py.scroll(50)
+
+    # drag drop item drop
+    if len(fingers) > 4 and fingers[0]==1 and fingers[1] == 1 and fingers[2] == 1 and fingers[3] == 1 and fingers[4] == 1:
         py.mouseUp(button='left')
     if (len(fingers)>3 and fingers[3] == 0) or (len(fingers)>4 and fingers[4] == 0):
         
         # 4. Only Index Finger : Moving Mode
-        if len(fingers)>2 and fingers[1] == 1 and fingers[2] == 1:
+        if len(fingers)>4 and fingers[1] == 1 and fingers[2] == 1 and fingers[3]==0 and fingers[4]==0:
+        # if len(fingers)>2 and fingers[1] == 1 and fingers[2] == 1:
             length, img, lineInfo = detector.findDistance(8, 12, img)
             
             # 5. Convert Coordinates
@@ -73,7 +85,8 @@ while True:
                 plocX, plocY = clocX, clocY
 
         # 8. Both Index and middle fingers are up : Clicking Mode Right CLick
-        if len(fingers) > 2 and fingers[1] == 0 and fingers[2] == 1:
+        # if len(fingers) > 2 and fingers[1] == 0 and fingers[2] == 1:
+        if len(fingers) > 4 and fingers[0] == 0 and fingers[1] == 0 and fingers[2] == 1 and fingers[3] == 0 and fingers[4] == 0:
             # 9. Find distance between fingers
             length, img, lineInfo = detector.findDistance(8, 12, img)
             # print(length)
@@ -83,7 +96,8 @@ while True:
                 py.click(button = 'left')
         
         # 8. Both Index and middle fingers are up : Clicking Mode Left CLick
-        if len(fingers) > 2 and fingers[1] == 1 and fingers[2] == 0:
+        # if len(fingers) > 2 and fingers[1] == 1 and fingers[2] == 0:
+        if len(fingers) > 4 and fingers[0] == 0 and fingers[1] == 1 and fingers[2] == 0 and fingers[3] == 0 and fingers[4] == 0:
             # 9. Find distance between fingers
             length, img, lineInfo = detector.findDistance(8, 12, img)
             # print(length)
@@ -91,15 +105,23 @@ while True:
             if length > 30:
                 cv2.circle(img, (lineInfo[4], lineInfo[5]),15, (0, 255, 0), cv2.FILLED)
                 py.click(button = 'right')
-        
+
+        # Double Click
         if len(fingers) > 4 and fingers[1] == 1 and fingers[2] == 1 and fingers[0]==0 and fingers[3]==0 and fingers[4]==0:
             # 9. Find distance between fingers
             length, img, lineInfo = detector.findDistance(8, 12, img)
             # print(length)
             # 10. Click mouse if distance short
-            if length < 25:
+            if length < 30:
                 cv2.circle(img, (lineInfo[4], lineInfo[5]),15, (0, 255, 0), cv2.FILLED)
                 py.doubleClick()
+        
+        # Scroll Down
+        if len(fingers) > 4  and fingers[0] == 0 and fingers[1]==1 and fingers[2] == 1 and fingers[3] == 1 and fingers[4] == 0:
+            length, img, lineInfo = detector.findDistance(4, 8, img)
+            # print("IN FUN")
+            cv2.circle(img, (lineInfo[4], lineInfo[5]),15, (0, 255, 0), cv2.FILLED)
+            py.scroll(-50)
 
         # Drag and Drop
         if len(fingers) > 4 and fingers[0] == 0 and fingers[1] == 0 and fingers[2] == 0 and fingers[3] == 0 and fingers[4] == 0:
@@ -130,4 +152,6 @@ while True:
     cv2.imshow("Image", img)
     cv2.waitKey(1)
     if keyboard.is_pressed('esc'):
+        cv2.destroyAllWindows()
+        cap.release()
         break
