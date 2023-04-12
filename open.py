@@ -10,7 +10,7 @@ window.geometry('250x250')
 def callback():
     with open("AiVirtualMouseProject.py", "r", encoding="utf-8") as file:
         exec(file.read())
-b = tk.Button(window,text="Run the Face Detection",command=callback)
+b = tk.Button(window,text="Run Virtual Mouse",command=callback)
 b.pack()
 
 window.mainloop()
