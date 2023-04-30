@@ -56,10 +56,10 @@ Note: Use Python version: 3.8.0
 <summary>Drag and Drop</summary>
  <br>
  <summary> Drag</summary>
-<img src="https://github.com/Vyomrana02/Virtual_Mouse/blob/main/GesturesDemo/8.png" alt="Drag and Drop" width="711" height="400"><br>
+<img src="https://github.com/Vyomrana02/Virtual_Mouse/blob/main/GesturesDemo/9.png" alt="Drag and Drop" width="711" height="400"><br>
  <br>
  <summary> Drop </summary>
-<img src="https://github.com/Vyomrana02/Virtual_Mouse/blob/main/GesturesDemo/9.png" alt="Drag and Drop" width="711" height="400"><br>
+<img src="https://github.com/Vyomrana02/Virtual_Mouse/blob/main/GesturesDemo/1.png" alt="Drag and Drop" width="711" height="400"><br>
  <figcaption>Gesture for drag and drop functionality. Can be used to move/tranfer files from one directory to other.</figcaption>
 </details>
 
@@ -67,9 +67,9 @@ Note: Use Python version: 3.8.0
 <summary>Multiple Item Selection</summary>
 <br>
  <summary>Multiple Select</summary>
-<img src="https://github.com/Vyomrana02/Virtual_Mouse/blob/main/GesturesDemo/8.png" alt="Drag and Drop" width="711" height="400"><br>
+<img src="https://github.com/Vyomrana02/Virtual_Mouse/blob/main/GesturesDemo/9.png" alt="Drag and Drop" width="711" height="400"><br>
  <br>
  <summary> Deselect </summary>
-<img src="https://github.com/Vyomrana02/Virtual_Mouse/blob/main/GesturesDemo/9.png" alt="Drag and Drop" width="711" height="400"><br>
+<img src="https://github.com/Vyomrana02/Virtual_Mouse/blob/main/GesturesDemo/1.png" alt="Drag and Drop" width="711" height="400"><br>
  <figcaption>Gesture to select multiple items</figcaption>
 </details>
