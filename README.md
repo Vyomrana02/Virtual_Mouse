@@ -74,7 +74,7 @@ Note: Use Python version: 3.8.0
 </details>
 <br>
 <br>
-#Also Added voice assistant to open AI VIRTUAL MOUSE APP 
+# Also Added voice assistant to open AI VIRTUAL MOUSE APP 
 its ScreenShot:-
 <img src="https://github.com/Vyomrana02/Virtual_Mouse/blob/main/GesturesDemo/10.png" alt="VOice Assistant" width="711" height="1000"/><br>
 <br>
