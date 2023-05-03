@@ -78,9 +78,14 @@ Note: Use Python version: 3.8.0
 <br>
 
 
-# Also Added voice assistant to open AI VIRTUAL MOUSE APP 
-ScreenShot:-
+### Also Added voice assistant to open AI VIRTUAL MOUSE APP 
+ScreenShot:-<br>
 <img src="https://github.com/Vyomrana02/Virtual_Mouse/blob/main/GesturesDemo/10.png" alt="VOice Assistant" width="711" height="1000"><br>
 <br>
 
-# Voice_Assistant_Features
+### Voice_Assistant_Features
+*  Opening VIRTUAL MOUSE APP
+*  Get Current Data and time.
+*  Search on webpage
+*  Search in Google Maps
+*  Open and move in File Structure of Local PC.
