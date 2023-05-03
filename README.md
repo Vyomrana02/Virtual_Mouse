@@ -8,7 +8,8 @@ Gesture Controlled Virtual Mouse makes human computer interaction simple by maki
 Note: Use Python version: 3.8.0
 
 # Features
- _click on dropdown to know more_ <br>
+
+<br>
 
 ### Gesture Recognition:
 <details>
