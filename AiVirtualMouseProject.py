@@ -1,5 +1,4 @@
 import sys
-sys.path.append('Users\prath\AppData\Local\Programs\Python\Python38\Lib\site-packages')
 import cv2
 from pynput.keyboard import Key, Listener
 import numpy as np
